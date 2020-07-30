@@ -13,74 +13,78 @@
 
 $_btn-size: 36px;
 
-
 /*------------------------------------*\
     STYLE
 \*------------------------------------*/
 
 // [1]
 .snip-btn {
-    @include font-bold;
-    background-color: palette(button, background);
-    border-radius: 3px;
-    border: 0;
-    color: palette(button, color);
-    cursor: pointer;
-    display: inline-block;
-    font-size: fontsize(button, base) / 1.2;
-    height: $_btn-size;
-    line-height: $_btn-size;
-    outline: 0;
-    padding: 0 1em;
-    text-transform: uppercase;
+  @include font-bold;
+  // border-radius: 3px;
+  border: 0;
+  color: $lightgrey;
+  border: 1px solid $lightgrey;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1.75;
+  outline: 0;
+  padding: 1.25rem 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1rem;
+  transition: all 250ms ease;
 
-    &:hover {
-        background-color: palette(button, background--hover);
-    }
+  &:hover {
+    transition: none;
+    color: $black;
+    border-color: $grey;
+  }
 
-    @media #{$mq-medium} {
-        font-size: fontsize(button, base);
-        padding: 0 2em;
-    }
+  @media #{$mq-medium} {
+    font-size: fontsize(button, base);
+    padding: 1.25rem 1rem;
+  }
 }
 
 // [2]
 .snip-btn--small {
-    height: auto;
-    line-height: normal;
-    padding: .417em;
+  height: auto;
+  line-height: normal;
+  padding: 0.417em;
 }
 
 // [3]
 .snip-btn--highlight {
-    background: palette(button, background--highlight);
-    color: palette(button, color--highlight);
+  // background: palette(button, background--highlight);
+  // color: palette(button, color--highlight);
 
-    &:hover {
-        background-color: palette(button, background--highlight-hover);
-    }
+  // &:hover {
+  //     background-color: palette(button, background--highlight-hover);
+  // }
 }
 
 // [4]
 .snip-btn--left {
-    float: left;
+  // float: left;
+  margin-right: 1rem;
 }
 
 .snip-btn--right {
-    float: right;
-    margin-left: 1em;
+  // float: right;
+  // margin-left: 1rem;
 }
 
 .snip-btn--danger {
-    background-color: palette(button, background--danger);
+  background-color: palette(button, background--danger);
 
-    &:hover {
-        background-color: palette(button, background--danger-hover);
-    }
+  &:hover {
+    background-color: palette(button, background--danger-hover);
+  }
 }
 
 .snip-btn--full {
-    display: block;
-    margin-top: 1em;
-    text-align: center;
+  display: block;
+  margin-top: 1em;
+  text-align: center;
 }

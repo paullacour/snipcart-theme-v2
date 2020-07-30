@@ -18,34 +18,44 @@ $_action-border: 1px solid palette(layout, border);
 \*------------------------------------*/
 
 .snip-actions {
-    border-top: $_action-border;
-    padding: $padding-small;
+  // border-top: $_action-border;
+  // padding: $padding-small;
+  display: flex;
 
-    // [1]
-    @include clearfix;
+  input {
+    width: 0;
+    border: 0;
+  }
 
-    @media #{$mq-medium} {
-        padding: $_action-pad;
-    }
+  // [1]
+  @include clearfix;
+
+  @media #{$mq-medium} {
+    // padding: $_action-pad;
+  }
+  .snip-btn {
+    flex: auto;
+    width: 100%;
+  }
 }
 
 .snip-actions--no-border {
-    border-top: none;
+  border-top: none;
 }
 
 .snip-actions--top {
-    border-top: none;
-    border-bottom: $_action-border;
+  border-top: none;
+  border-bottom: $_action-border;
 }
 
 .snip-actions__link {
-    color: palette(action, link);
+  color: palette(action, link);
 }
 
 .snip-actions__link--small {
-    font-size: fontsize(action, small);
+  font-size: fontsize(action, small);
 }
 
 .snip-actions__link--right {
-    float: right;
+  float: right;
 }

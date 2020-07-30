@@ -39,10 +39,11 @@ $_big-loader-height: .3em;
 .snip-loader--bar {
     height: $_big-loader-height;
     width: 100%;
-    position: relative;
+    // position: relative;
     overflow: hidden;
-    background-color: palette(loader, background);
-    margin-top: -.3em;
+    background-color: $offwhite;
+    position: absolute;
+    // margin-top: -.3em;
 
     &:before{
         display: block;
@@ -51,7 +52,7 @@ $_big-loader-height: .3em;
         left: -200px;
         width: 30%;
         height: $_big-loader-height;
-        background-color: palette(loader, background--highlight);
+        background-color: $black;
         animation: snip-loading 2s ease-in-out infinite;
     }
 

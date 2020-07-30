@@ -15,67 +15,92 @@
 
 $_cols-border: 1px solid palette(layout, border);
 
-
 /*------------------------------------*\
     STYLE
 \*------------------------------------*/
 
 .snip-cols {
-    @media #{$mq-medium} {
-        // [1]
-        display: flex;
+  @media #{$mq-medium} {
+    // [1]
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
 
-        // [2]
-        @include clearfix;
-    }
+    // [2]
+    @include clearfix;
+  }
 }
 
 .snip-col {
-    padding: 0 $padding-small $padding-small;
-    
+  // padding: 0 $padding-small $padding-small;
+  //   padding-top: 1rem;
+
+  + .snip-col {
+    border-top: $_cols-border;
+    // padding-top: $padding-small;
+  }
+  > div {
+    width: calc(50% - 1rem);
+  }
+
+  #snipcart-billing-state-picker-holder,
+  #snipcart-shipping-state-picker-holder {
+    order: 99;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    span {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      .snip-form__container.snip-form__container--select {
+        width: calc(50% - 1rem);
+      }
+      .snipcart-country {
+        padding: 0.6rem 0.6rem calc(0.6rem + 1px) 0.6rem;
+      }
+    }
+  }
+
+  @media #{$mq-medium} {
+    // [2]
+    float: left;
+    // padding: .25em 1.25em;
+    // width: 33.333333%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
     + .snip-col {
-        border-top: $_cols-border;
-        padding-top: $padding-small;
-    }
+      //   border-left: $_cols-border;
+      border-top: 0;
+      //   padding-top: 0.25em;
 
-    @media #{$mq-medium} {
-        // [2]
-        float: left;
-        padding: .25em 1.25em;
-        width: 33.333333%;
-    
-        + .snip-col {
-            border-left: $_cols-border;
-            border-top: 0;
-            padding-top: .25em;
-
-            &.snip-col--no-border {
-                border-left: none;
-            }
-        }
+      &.snip-col--no-border {
+        border-left: none;
+      }
     }
+  }
 }
-
 
 .snip-col--half {
-    @media #{$mq-medium} {
-        width: 50%;
-    }
+  @media #{$mq-medium} {
+    width: 50%;
+  }
 }
 
-
 .snip-col--full {
-    @media #{$mq-medium} {
-        width: 100%;
-    }
+  @media #{$mq-medium} {
+    width: 100%;
+  }
 }
 
 .snip-col--right {
-    border-left: $_cols-border;
-    // [3]
-    order: 2;
+  //   border-left: $_cols-border;
+  // [3]
+  order: 2;
 }
 
 .snip-col--no-border {
-    border: none;
+  border: none;
 }

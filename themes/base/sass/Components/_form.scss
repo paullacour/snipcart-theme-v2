@@ -11,79 +11,85 @@
 
 $_form-border: 1px solid palette(form, border);
 
-
 /*------------------------------------*\
     STYLE
 \*------------------------------------*/
 
 .snip-form--small {
-    padding: 2em 15%;
-    text-align: center;
+  padding: 2em 15%;
+  text-align: center;
 }
 
 .snip-form--discount {
-    float: right;
-    margin-right: .5em;
-    max-width: 50%;
+  float: right;
+  margin-right: 0.5em;
+  max-width: 50%;
 
-    @media #{$mq-medium} {
-        margin-right: 1em;
-        max-width: none;
-    }
+  @media #{$mq-medium} {
+    margin-right: 1em;
+    max-width: none;
+  }
 }
 
 .snip-form__container {
-    @include clearfix;
-    clear: left;
+  @include clearfix;
+  clear: left;
 
-    + .snip-form__container {
-        margin-top: 1em;
-    }
+  // + .snip-form__container {
+  //     margin-top: 1em;
+  // }
+  &.snip-form__container--input {
+    margin-bottom: 0.75rem;
+    position: relative;
+  }
 }
 
 .snip-form__label {
-    color: palette(form, label-color);
-    display: block;
-    font-size: fontsize(form, small);
-    margin: 0 0 .5em 0;
-    overflow: hidden;
-    text-transform: uppercase;
-    cursor: pointer;
+  color: palette(form, label-color);
+  display: block;
+  font-size: fontsize(form, small);
+  //   margin: 0 0 0.5em 0;
+  overflow: hidden;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .snip-form__description {
-    margin: 1em 0;
+  margin: 1em 0;
 }
 
 .snip-form__help {
-    @include font-bold;
-    color: palette(form, color--highlight);
-    float: right;
-    font-size: fontsize(form, small);
+  @include font-bold;
+  color: palette(form, color--highlight);
+  float: right;
+  font-size: fontsize(form, small);
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .snip-form__select--small {
-    float: left;
-    width: 49%;
+  float: left;
+  width: 49%;
 
-    ~ .snip-form__select--small {
-        margin-left: 2%;
-    }
+  ~ .snip-form__select--small {
+    margin-left: 2%;
+  }
 }
 
 .snip-form__error {
-    background: palette(error, color);
-    border-radius: 3px;
-    color: palette(error, text-color--invert);
-    font-size: fontsize(form, base);
-    padding: .357em;
-    text-align: center;
+  // background: palette(error, color);
+  // border-radius: 3px;
+  color: palette(error, color);
+  font-size: fontsize(form, base);
+  // padding: 0.357em;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .snip-form__sq-input {
-    @include input-reset;
+  @include input-reset;
 }

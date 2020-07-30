@@ -4,7 +4,7 @@
     We don't want to load many fonts on your site so we stay classic.
     You can add your custom fonts here and/or define your own fonts family variables.
 */
-$font-base: Arial, sans-serif;
+$font-base: 'Confoederatio', Helvetica, sans-serif;
 
 
 /**
@@ -18,6 +18,13 @@ $font-base: Arial, sans-serif;
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Placid";
+    src: url('fonts/placid/placid.woff') format("woff"),
+         url('fonts/placid/placid.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 
 /**
     FONT HELPERS
@@ -36,55 +43,55 @@ $font-base: Arial, sans-serif;
 */
 $fontsize: (
     action: (
-        small: 12px
+        small: 1rem
     ),
     button: (
-        base: 12px
+        base: 1rem
     ),
     error: (
-        base: 14px
+        base: 1rem
     ),
     flash: (
-        base: 12px
+        base: 1rem
     ),
     footer: (
-        base: 10px
+        base: 1rem
     ),
     form: (
-        small: 12px,
-        base: 14px
+        small: 1rem,
+        base: 1rem
     ),
     header: (
-        small: 14px,
-        large: 30px
+        small: 1rem,
+        large: 1rem
     ),
     product: (
-        base: 14px,
-        large: 20px,
-        icon: 30px
+        base: 1rem,
+        large: 1rem,
+        icon: 1rem
     ),
     quantity-trigger: (
-        large: 18px,
-        x-large: 22px
+        large: 1rem,
+        x-large: 1rem
     ),
     reset: (
-        base: 14px,
-        large: 16px
+        base: 1rem,
+        large: 1rem
     ),
     static: (
-        small: 12px,
-        base: 14px
+        small: 1rem,
+        base: 1rem
     ),
     step: (
-        small: 10px,
-        icon: 34px
+        small: 1rem,
+        icon: 1rem
     ),
     table: (
-        small: 12px,
-        base: 14px,
-        large: 20px
+        small: 1rem,
+        base: 1rem,
+        large: 1rem
     ),
     discount: (
-        icon: 20px
+        icon: 1rem
     )
 );

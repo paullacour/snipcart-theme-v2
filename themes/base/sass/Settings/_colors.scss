@@ -7,6 +7,11 @@
     We also respect our BEM like notation and files architecture.
 */
 
+$black: #1d1d1b;
+$offwhite: #fefcfa;
+$grey: #6e6e6e;
+$lightgrey: #e9e8e3;
+
 $palettes: (
     action: (
         link: #999
@@ -95,11 +100,9 @@ $palettes: (
         color--link: #999
     ),
     step: (
-        background: #ccc,
-        background--active: #fff,
-        border: #bbb,
-        color: #999,
-        color--active: #333
+        color: #e9e8e3,
+        color--active: #1d1d1b,
+        border--active: #6e6e6e
     ),
     table: (
         background--highlight: #f8f8f8,

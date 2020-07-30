@@ -22,8 +22,9 @@ $_static-border: 1px solid palette(static, border);
 }
 
 .snip-static--highlight {
-    background: palette(static, background--highlight);
+    // background: palette(static, background--highlight);
     border-top: $_static-border;
+    margin-bottom: 2rem;
 }
 
 .snip-static__title {
@@ -39,15 +40,16 @@ $_static-border: 1px solid palette(static, border);
 
 .snip-static__content {
     font-size: fontsize(static, small);
-    line-height: 1.6;
-    margin-top: 1em;
+    line-height: 1.75;
+    // margin-top: 1em;
 }
 
 .snip-static__item {
     max-width: 100%;
 
     ~ .snip-static__item {
-        margin-top: 1.5em;
+        // margin-top: 1.5em;
+        display: none;
     }
 }
 

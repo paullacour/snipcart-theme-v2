@@ -10,105 +10,105 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_steps-height: 60px;
-
-$_steps-border: 1px solid palette(step, border);
-
+// $_steps-height: 60px;
 
 /*------------------------------------*\
     STYLE
 \*------------------------------------*/
 
 .snip-steps {
-    background: palette(step, background);
-    display: block;
-    height: $_steps-height / 1.25;
+  margin-bottom: 5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $black;
+  display: flex !important;
 
-    &.snip-steps--4 li {
-        width: percentage(1 / 4);
-    }
+  &.snip-steps--4 li {
+    width: percentage(1 / 4);
+  }
 
-    &.snip-steps--5 li {
-        width: percentage(1 / 5);
-    }
+  &.snip-steps--5 li {
+    width: percentage(1 / 5);
+  }
 
-    &.snip-steps--6 li {
-        width: percentage(1 / 6);
-    }
+  &.snip-steps--6 li {
+    width: percentage(1 / 6);
+  }
 
-    &.snip-steps--7 li {
-        width: percentage(1 / 7);
-    }
-
-    @media #{$mq-medium} {
-        height: $_steps-height;
-    }
+  &.snip-steps--7 li {
+    width: percentage(1 / 7);
+  }
 }
 
 .snip-step__item {
-    background: palette(step, background);
-    border-bottom: $_steps-border;
-    color: palette(step, color);
-    cursor: pointer;
-    display: table;
-    float: left;
-    height: inherit;
-    // [1]
-    user-select: none;
+  padding: 1.25rem 1rem;
+  cursor: pointer;
+  border: 1px solid palette(step, color);
+  color: palette(step, color);
+  // [1]
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  transition: all 250ms ease;
 
-    @supports (display: flex) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  &:hover {
+    transition: none;
+    color: $black;
+    border-color: $grey;
+  }
 
-    + .snip-step__item {
-        border-left: $_steps-border;
-    }
+  &:not(:last-of-type) {
+    margin-right: 1.25rem;
+  }
 
-    &.js-active {
-        background: palette(step, background--active);
-        border-bottom-color: palette(step, background--active);
-        color: palette(step, color--active);
-    }
+  &.js-active {
+    border-color: palette(step, border--active);
+    color: palette(step, color--active);
+  }
 
-    &.js-hidden {
-        display: none;
-    }
+  &.js-hidden {
+    display: none;
+  }
 
-    @media #{$mq-medium} {
-        justify-content: initial;
-    }
+  @media #{$mq-medium} {
+    justify-content: initial;
+  }
 }
 
 .snip-step__nb {
-    display: table-cell;
-    font-size: fontsize(step, icon) / 1.25;
-    padding: 0 .25em;
-    text-align: center;
-    vertical-align: middle;
+  display: none;
+  // display: table-cell;
+  // font-size: fontsize(step, icon) / 1.25;
+  // padding: 0 .25em;
+  // text-align: center;
+  // vertical-align: middle;
 
-    @media #{$mq-medium} {
-        font-size: fontsize(step, icon);
-    }
+  // @media #{$mq-medium} {
+  //     font-size: fontsize(step, icon);
+  // }
 }
 
 .snip-step__label {
-    display: none;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%;
 
-    @media #{$mq-medium} {
-        @include font-bold;
-        display: table-cell;
-        font-size: fontsize(step, small);
-        line-height: 16px;
-        padding-right: .5em;
-        text-align: left;
-        text-transform: uppercase;
-        vertical-align: middle;
-        width: 66.666666%;
-    }
+  //   @media #{$mq-medium} {
+  //     @include font-bold;
+  //     display: table-cell;
+  //     font-size: fontsize(step, small);
+  //     line-height: 16px;
+  //     padding-right: 0.5em;
+  //     text-align: left;
+  //     text-transform: uppercase;
+  //     vertical-align: middle;
+  //     // width: 66.666666%;
+  //   }
 
-    @media #{$mq-large} {
-        padding-right: 1em;
-    }
+  //   @media #{$mq-large} {
+  //     padding-right: 1em;
+  //   }
 }
