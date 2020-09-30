@@ -19,17 +19,14 @@ $_layout-content-border: 1px solid palette(layout, content-border);
 \*------------------------------------*/
 
 .snip-layout__main-container {
-  // background: palette(layout, background);
-  // margin: 0 auto;
-  // max-width: 62.25em;
-  // position: relative;
-  // height: 100%;
-  width: 50%;
+  width: 55%;
+  min-width: 480px;
   margin-top: 10.5vw;
-  // display: flex;
-  // align-items: center;
-  // flex-direction: column;
-  // justify-content: center;
+  @media #{$mq-small} {
+    width: 100%;
+    margin-top: calc(15vw + 5rem);
+    min-width: initial;
+  }
 }
 
 .snip-layout__close {
@@ -37,22 +34,20 @@ $_layout-content-border: 1px solid palette(layout, content-border);
   position: absolute;
   text-transform: uppercase;
   right: 3.5vw;
-  top: 10.5vw;
+  // top: 10.5vw;
+  top: calc(14vw - 2.5rem);
   z-index: 2;
   &::before {
-    content: 'continuer vos achats';
+    content: "continuer vos achats";
     margin-right: 2rem;
   }
   .snip-ico--close {
     font-size: 1.2rem;
   }
-  // @media #{$mq-medium} {
-  //   font-size: $_layout-close-font-size;
-  //   top: 0.208em;
-  //   &.js-hidden {
-  //     display: none;
-  //   }
-  // }
+  @media #{$mq-small} {
+    left: 3.5vw;
+    top: calc(15vw + 4.4rem);
+  }
 }
 
 .snip-layout__loading {
@@ -69,6 +64,10 @@ $_layout-content-border: 1px solid palette(layout, content-border);
   // padding: 2rem 0 8rem 0;
   padding-top: 2rem;
   margin-bottom: 8rem;
+
+  @media #{$mq-small} {
+    margin-bottom: 4rem;
+  }
 
   // @media #{$mq-medium} {
   //   padding: 2rem 0;
@@ -127,5 +126,16 @@ $_layout-content-border: 1px solid palette(layout, content-border);
 }
 
 #snipcart-sub-content {
-  margin-bottom: 3.5vw;
+  // margin-bottom: 3.5vw;
+  margin-bottom: 10vw;
+  @media #{$mq-small} {
+    margin-bottom: 25vw;
+  }
+}
+
+#snipcart-fees {
+  border-top: 1px solid $lightgrey;
+  @media #{$mq-small} {
+    margin-top: 4rem;
+  }
 }

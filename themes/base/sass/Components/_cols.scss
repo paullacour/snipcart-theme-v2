@@ -38,9 +38,15 @@ $_cols-border: 1px solid palette(layout, border);
   + .snip-col {
     border-top: $_cols-border;
     // padding-top: $padding-small;
+    @media #{$mq-small} {
+      border-top: none;
+    }
   }
   > div {
     width: calc(50% - 1rem);
+    @media #{$mq-small} {
+      width: initial;
+    }
   }
 
   #snipcart-billing-state-picker-holder,

@@ -84,9 +84,10 @@
   // text-align: center;
   // vertical-align: middle;
 
-  // @media #{$mq-medium} {
-  //     font-size: fontsize(step, icon);
-  // }
+  @media #{$mq-small} {
+    display: initial;
+    font-size: fontsize(step, icon);
+  }
 }
 
 .snip-step__label {
@@ -95,6 +96,10 @@
   text-transform: uppercase;
   vertical-align: middle;
   width: 100%;
+
+  @media #{$mq-small} {
+    display: none;
+  }
 
   //   @media #{$mq-medium} {
   //     @include font-bold;

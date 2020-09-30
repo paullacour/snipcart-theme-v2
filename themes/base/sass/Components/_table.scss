@@ -37,6 +37,10 @@ $_notice-error--text-color: palette(static, color--highlight);
   width: 100%;
   margin-bottom: 8rem;
 
+  @media #{$mq-small} {
+    margin-bottom: 4rem;
+  }
+
   // [1]
   td,
   th,
@@ -102,9 +106,9 @@ $_notice-error--text-color: palette(static, color--highlight);
       padding: $padding-small 0;
       position: relative;
 
-      + tr {
-        border-top: $_table-border;
-      }
+      // + tr {
+      //   border-top: $_table-border;
+      // }
     }
 
     td {
@@ -142,6 +146,13 @@ $_notice-error--text-color: palette(static, color--highlight);
       td {
         padding: 0.5em;
         text-align: inherit;
+        @media #{$mq-small} {
+          display: flex;
+          justify-content: space-between;
+          &::after {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -238,7 +249,8 @@ $_notice-error--text-color: palette(static, color--highlight);
   padding-right: 1rem;
   @media #{$mq-small} {
     float: left;
-    margin-top: $padding-small * 2;
+    // margin-top: $padding-small * 2;
+    margin-top: $padding-small;
     text-align: center;
     width: 33.333333%;
 
